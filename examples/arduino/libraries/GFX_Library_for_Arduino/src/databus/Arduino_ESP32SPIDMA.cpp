@@ -60,7 +60,11 @@ bool Arduino_ESP32SPIDMA::begin(int32_t speed, int8_t dataMode)
 
   if (!_div)
   {
+#if ESP_ARDUINO_VERSION >= ESP_ARDUINO_VERSION_VAL(3, 3, 6)
+    _div = spiFrequencyToClockDiv(nullptr, _speed);
+#else
     _div = spiFrequencyToClockDiv(_speed);
+#endif
   }
 
   // set pin mode
