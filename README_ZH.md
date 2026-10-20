@@ -46,9 +46,9 @@
 ## 📦 快速开始
 
 1. 使用 Type-C 数据线将开发板连接至电脑。
-2. 下载[带小智的出厂固件](firmware/ESP32-S3-Touch-LCD-3.5B_XiaoZhi_20261020.bin)，在 Flash Download Tool 中选择 ESP32-S3。
+2. 下载[带小智的出厂固件](firmware/ESP32-S3-Touch-LCD-3.5B_FactoryOnly_20261020.bin)，在 Flash Download Tool 中选择 ESP32-S3。
 3. 将合并固件烧录到 `0x0`。如需手动进入下载模式，按住 BOOT，按一下 RESET，再松开 BOOT。
-4. 以 115200 波特率打开串口，检查示例的预期现象。
+4. 复位后进入应用桌面，在设置中配置 Wi-Fi，再打开小智完成服务激活。
 
 出厂固件源码位于 [examples/factory](examples/factory/)，包含应用桌面和小智语音对话；[旧版出厂示例](examples/esp-idf/01_factory/README_ZH.md) 单独保留。可自行编译源码，或从[产品文档](https://docs.waveshare.net/ESP32-S3-Touch-LCD-3.5B/)获取官方固件。
 

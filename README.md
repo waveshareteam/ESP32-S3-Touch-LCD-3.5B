@@ -46,9 +46,9 @@ PCB V1/V2 schematic revisions are separate from the enclosure options.
 ## 📦 Quick Start
 
 1. Connect the board to a computer using a USB-C data cable.
-2. Download the [factory image with Xiaozhi](firmware/ESP32-S3-Touch-LCD-3.5B_XiaoZhi_20261020.bin) and select ESP32-S3 in Flash Download Tool.
+2. Download the [factory image with Xiaozhi](firmware/ESP32-S3-Touch-LCD-3.5B_FactoryOnly_20261020.bin) and select ESP32-S3 in Flash Download Tool.
 3. Flash the merged image at `0x0`. If download mode is required, hold BOOT, press RESET, then release BOOT.
-4. Open the serial monitor at 115200 baud and check the expected result.
+4. Reset the board to open the desktop. Configure Wi-Fi in Settings, then open Xiaozhi to activate the service.
 
 Factory firmware source: [examples/factory](examples/factory/), with the application desktop and Xiaozhi voice chat. The [legacy factory example](examples/esp-idf/01_factory/) is also retained. Build the source or obtain the official firmware from the [product documentation](https://docs.waveshare.net/ESP32-S3-Touch-LCD-3.5B/).
 
