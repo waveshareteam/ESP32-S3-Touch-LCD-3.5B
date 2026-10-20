@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/waveshareteam/esp32-repo-template/v1/schema/product.schema.json",
   "product": "ESP32-S3-Touch-LCD-3.5B",
   "product_url": "https://www.waveshare.net/shop/ESP32-S3-Touch-LCD-3.5B.htm",
-  "tier": 0,
+  "tier": 1,
   "target": "esp32s3",
   "esp_idf": {
     "versions": [
