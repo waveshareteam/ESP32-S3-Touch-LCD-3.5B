@@ -4,11 +4,11 @@
 
 ## What It Does
 
-Integrate voice chat, activation, wake-word detection and camera MCP tools with the product desktop. Local adaptations of the Espressif Xiaozhi and MCP components are kept alongside this application; reused Xiaozhi resources retain their license in [third_party/xiaozhi_esp32](third_party/xiaozhi_esp32/).
+Use AIChats on the desktop for voice conversations, wake-word activation, recognized text and reply subtitles. With a compatible camera connected, capture photos for vision analysis.
 
 ## Hardware Required
 
-The board's ES8311 microphone and speaker, Wi-Fi and an activated Xiaozhi account. The camera tool requires an OV5640.
+Use ESP32-S3-Touch-LCD-3.5B or ESP32-S3-Touch-LCD-3.5B-C, connect a speaker and prepare a 2.4 GHz Wi-Fi network with Internet access. Camera functions require an OV5640; follow the on-screen activation instructions on first use.
 
 ## How to Run
 
@@ -16,7 +16,7 @@ Build and flash the complete [factory project](../../README.md), including its m
 
 ## Expected Result
 
-The application displays recognition and reply text and plays spoken replies. The camera tool captures a fresh image, shows its preview and sends it to the configured vision service. Music, Mic Test and Xiaozhi share the BSP audio session gate.
+The application displays recognition and reply text and plays spoken replies. Ask about the camera view to capture a photo for vision analysis; exit the current conversation before switching to Music or Mic Test.
 
 ## Troubleshooting
 

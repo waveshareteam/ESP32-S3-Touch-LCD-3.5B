@@ -1,31 +1,27 @@
-[English](README.md) | [简体中文](README_ZH.md)
+# Factory application suite
 
-# Factory Applications with Xiaozhi
+[English](README.md) | [简体中文](README_ZH.md)
 
 ## What It Does
 
-Run the 320 x 480 desktop with Settings, Xiaozhi voice chat, Touch Test, Photos, Weather, Music, Sensor, 2048, Camera and Mic Test. Sensor displays RTC and QMI8658 data.
+Provides a portrait 320 x 480 desktop with 11 applications: Settings, AIChats, Touch Test, Photos, Weather, Music, Sensor, 2048, Camera, Mic Test and Button Test. Sensor displays hardware RTC time and QMI8658 accelerometer/gyroscope data.
 
 ## Hardware Required
 
-ESP32-S3-Touch-LCD-3.5B or ESP32-S3-Touch-LCD-3.5B-C, a USB-C data cable and a speaker. Camera functions require an OV5640; photos and music use a FAT32 microSD card. Xiaozhi requires Wi-Fi and service activation.
+Use ESP32-S3-Touch-LCD-3.5B or the enclosed ESP32-S3-Touch-LCD-3.5B-C and a USB-C data cable. Camera, audio and SD-card functions require a compatible camera, speaker and FAT32 microSD card respectively; the enclosed version includes an OV5640 camera.
 
 ## How to Run
 
-Use the ESP-IDF version in [product.json](../../.github/product.json), then run in this directory:
-
-```sh
-idf.py set-target esp32s3
-idf.py build
-idf.py -p PORT flash monitor
-```
-
-Replace `PORT` with your serial port. Use full `flash` when upgrading from the legacy firmware: it writes the new partition table and WakeNet model as well as the application. Open Settings to configure Wi-Fi, then open Xiaozhi and follow its activation prompt.
+To restore the supplied factory software, follow the [firmware instructions](../../firmware/README.md). To build this project, configure the ESP-IDF version listed in [Development Environment](../../README.md#development-environment), then run `idf.py set-target esp32s3`, `idf.py build` and `idf.py -p PORT flash monitor` in this directory, replacing `PORT` with the device's serial port.
 
 ## Expected Result
 
-The desktop opens at startup. Open Xiaozhi, complete activation, then say "Ni hao Xiao Zhi" or tap Talk to start a conversation; the camera tool can capture a photo for analysis. Other applications remain available from the launcher.
+The screen lights up when the desktop is ready, with Settings first and AIChats second. Tap an icon to open an application; Settings offers brightness, volume, Wi-Fi scanning and setup, and SD-card information.
+
+Short press PWR once to power on; press and hold PWR for 5 seconds to power off. Use short presses when checking PWR in Button Test.
+
+For application controls, Wi-Fi setup and SD-card folders, see the [user guide](USER_GUIDE.md).
 
 ## Troubleshooting
 
-If the wake word does not work, flash the complete project including the model partition. Keep `CONFIG_CODEC_I2C_BACKWARD_COMPATIBLE` disabled to share the BSP I2C bus. Check Wi-Fi and activation status for connection failures. The [legacy factory example](../esp-idf/01_factory/) remains available separately.
+Weather and AIChats require Internet access; follow the on-screen instructions to activate AIChats. If a speech model is missing, flash the complete factory firmware or use a full `idf.py flash` rather than flashing only the application; see the [user guide](USER_GUIDE.md#common-questions) for other questions.

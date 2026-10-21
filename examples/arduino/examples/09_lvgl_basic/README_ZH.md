@@ -8,7 +8,7 @@
 
 ## 硬件需求
 
-ESP32-S3-Touch-LCD-3.5B 或 ESP32-S3-Touch-LCD-3.5B-C。Type-C 数据线。原 LVGL 8 示例已更新为共用的 LVGL 9 实现。
+ESP32-S3-Touch-LCD-3.5B 或 ESP32-S3-Touch-LCD-3.5B-C，以及 Type-C 数据线。
 
 ## 怎么运行
 

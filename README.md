@@ -9,7 +9,7 @@
   </p>
   <p>
     <a href="https://www.waveshare.net/shop/ESP32-S3-Touch-LCD-3.5B.htm">🌐 Product</a> &middot;
-    <a href="#quick-start">📦 Firmware</a> &middot;
+    <a href="firmware/">📦 Firmware</a> &middot;
     <a href="examples/esp-idf/">🧩 ESP-IDF</a> &middot;
     <a href="examples/arduino/examples/">🔧 Arduino</a> &middot;
     <a href="https://docs.waveshare.net/ESP32-S3-Touch-LCD-3.5B/">📚 Documentation</a>
@@ -46,11 +46,11 @@ PCB V1/V2 schematic revisions are separate from the enclosure options.
 ## 📦 Quick Start
 
 1. Connect the board to a computer using a USB-C data cable.
-2. Download the [factory image with Xiaozhi](firmware/ESP32-S3-Touch-LCD-3.5B_FactoryOnly_20261020.bin) and select ESP32-S3 in Flash Download Tool.
+2. Download the latest factory image from [firmware](firmware/) and select ESP32-S3 in Flash Download Tool. See the [flashing instructions](firmware/README.md).
 3. Flash the merged image at `0x0`. If download mode is required, hold BOOT, press RESET, then release BOOT.
 4. Reset the board to open the desktop. Configure Wi-Fi in Settings, then open Xiaozhi to activate the service.
 
-Factory firmware source: [examples/factory](examples/factory/), with the application desktop and Xiaozhi voice chat. The [legacy factory example](examples/esp-idf/01_factory/) is also retained. Build the source or obtain the official firmware from the [product documentation](https://docs.waveshare.net/ESP32-S3-Touch-LCD-3.5B/).
+The [factory source](examples/factory/) is available for building the current firmware. The [legacy factory example source](examples/esp-idf/01_factory/) is retained for reference.
 
 ## 🧪 Examples
 
@@ -84,19 +84,23 @@ Factory firmware source: [examples/factory](examples/factory/), with the applica
 
 The Arduino examples share one bundled LVGL 9.2.2 library. The ESP-IDF peripheral examples and legacy factory use LVGL 8.4; the current factory uses LVGL 9.6.0~1. Each ESP-IDF project manages its own dependencies.
 
+### Factory Demo
+
+The [factory application suite](examples/factory/) provides 11 applications: Settings, AIChats, Touch Test, Photos, Weather, Music, Sensor, 2048, Camera, Mic Test and Button Test. For Wi-Fi setup, application controls and SD-card folders, see the [user guide](examples/factory/USER_GUIDE.md).
+
+Short press PWR once to power on; press and hold PWR for 5 seconds to power off.
+
 <a id="development-environment"></a>
 
 ## 🛠️ Development Environment
 
 | Framework | Version | Examples |
 | --- | --- | --- |
-| ESP-IDF | v5.5.4 | 7 + factory source |
+| ESP-IDF | v5.5.4 | 7 |
+| ESP-IDF (factory) | v5.5.4 | 1 |
 | Arduino-ESP32 | 3.3.10 | 11 |
 
 Versions and the Arduino board options are defined in [product.json](.github/product.json). Select **ESP32S3 Dev Module**, 16 MB Flash, OPI PSRAM, QIO Flash, USB CDC on boot, and the 16 MB partition scheme with 3 MB application / 9 MB FATFS. Copy the supplied Arduino libraries and shared `lv_conf.h` into your sketchbook's `libraries` directory.
-
-
-
 ## 📚 Resources
 
 - [Bare board product page](https://www.waveshare.net/shop/ESP32-S3-Touch-LCD-3.5B.htm)
