@@ -68,7 +68,14 @@ void Camera::save(camera_fb_t *frame) {
     else message("Photo save failed. Check SD card / free space.");
 }
 void Camera::work() {
-    if(bsp_get_init_status()->camera!=ESP_OK) { message("Camera unavailable. Check BSP startup log."); return; }
+    const esp_err_t initialized=bsp_camera_init();
+    if(initialized!=ESP_OK) {
+        char detail[96];
+        snprintf(detail,sizeof(detail),"Camera init: %s. Reopen to retry.",esp_err_to_name(initialized));
+        message(detail);
+        ESP_LOGE("camera","BSP camera initialization failed: %s",esp_err_to_name(initialized));
+        return;
+    }
     if(!bsp_camera_acquire(1000)) { message("Camera busy. Reopen to retry."); return; }
     message("Live preview / BOOT: rotate 180 deg");
     while(!stopping()) {
