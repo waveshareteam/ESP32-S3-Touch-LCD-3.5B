@@ -8,7 +8,7 @@ Display a label and two interactive switches using LVGL 9.
 
 ## Hardware Required
 
-ESP32-S3-Touch-LCD-3.5B or ESP32-S3-Touch-LCD-3.5B-C. USB-C cable. This replaces the old LVGL 8 sketch with the shared LVGL 9 implementation.
+ESP32-S3-Touch-LCD-3.5B or ESP32-S3-Touch-LCD-3.5B-C and a USB-C data cable.
 
 ## How to Run
 

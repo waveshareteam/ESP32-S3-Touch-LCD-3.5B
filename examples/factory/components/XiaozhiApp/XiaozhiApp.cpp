@@ -63,7 +63,7 @@ constexpr size_t DEVICE_TDM_CHANNELS = BSP_AUDIO_VOICE_CHANNELS;
 constexpr size_t DEVICE_MIC1_SLOT = 0;
 static_assert(
     XiaozhiAudioProcessor::INPUT_CHANNELS == 1,
-    "S3 3.5 has one ES8311 microphone"
+    "S3 3.5B has one ES8311 microphone"
 );
 constexpr size_t INPUT_READ_FRAMES = DEVICE_AUDIO_SAMPLE_RATE / 100;
 constexpr size_t MAX_SERVER_SAMPLE_RATE = 48000;

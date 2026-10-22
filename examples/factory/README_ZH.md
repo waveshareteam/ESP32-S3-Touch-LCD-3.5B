@@ -1,31 +1,27 @@
-[English](README.md) | [简体中文](README_ZH.md)
+# 出厂应用工程
 
-# 带小智的出厂应用
+[English](README.md) | [简体中文](README_ZH.md)
 
 ## 功能
 
-运行 320 x 480 桌面，包含设置、小智语音对话、触摸测试、相册、天气、音乐、传感器、2048、摄像头及麦克风测试。传感器应用显示 RTC 和 QMI8658 数据。
+提供 320 x 480 竖屏桌面，包含 Settings、AIChats、Touch Test、Photos、Weather、Music、Sensor、2048、Camera、Mic Test 和 Button Test，共 11 个应用。Sensor 显示硬件 RTC 时间及 QMI8658 加速度、陀螺仪数据。
 
 ## 硬件需求
 
-ESP32-S3-Touch-LCD-3.5B 或 ESP32-S3-Touch-LCD-3.5B-C、Type-C 数据线及扬声器。摄像头功能需要 OV5640；相册和音乐需要 FAT32 microSD 卡。小智需要 Wi-Fi 网络并完成服务激活。
+使用 ESP32-S3-Touch-LCD-3.5B 或带外壳的 ESP32-S3-Touch-LCD-3.5B-C，准备 USB-C 数据线。摄像头、音频和 SD 功能分别需要兼容摄像头、扬声器和 FAT32 microSD 卡；带外壳版包含 OV5640 摄像头。
 
 ## 怎么运行
 
-启用 [product.json](../../.github/product.json) 指定的 ESP-IDF，然后在本目录执行：
-
-```sh
-idf.py set-target esp32s3
-idf.py build
-idf.py -p PORT flash monitor
-```
-
-将 `PORT` 替换为实际串口。从旧版固件升级时使用完整 `flash`，同时烧录新分区表、唤醒模型及应用。进入设置配置 Wi-Fi，再打开小智，按照界面提示完成激活。
+恢复仓库随附的出厂软件请参照[固件烧录说明](../../firmware/README_ZH.md)。从源码编译时，请按[开发环境](../../README_ZH.md#development-environment)配置指定版本的 ESP-IDF，在本目录依次执行 `idf.py set-target esp32s3`、`idf.py build`、`idf.py -p PORT flash monitor`，将 `PORT` 替换为设备的实际串口。
 
 ## 预期现象
 
-上电进入应用桌面。打开小智并完成激活后，说“你好小智”或点击 Talk 开始对话；摄像头工具可拍照并进行图像分析。其他应用可从桌面打开。
+启动完成后，屏幕亮起并显示桌面，Settings 位于第一、AIChats 位于第二。点击图标进入应用，设置中可调背光和音量、扫描或配置 Wi-Fi、查看 SD 信息。
+
+短按 PWR 按键一次开机，长按 5 秒关机。在 Button Test 中测试 PWR 时请短按。
+
+各应用操作、配网步骤和 SD 卡文件夹要求请参照[使用说明](USER_GUIDE_ZH.md)。
 
 ## 常见问题
 
-无法唤醒时，请完整烧录工程，确保模型分区已写入。保持 `CONFIG_CODEC_I2C_BACKWARD_COMPATIBLE` 关闭，以共用 BSP 的 I2C 总线。连接失败时检查 Wi-Fi 和激活状态。[旧版出厂示例](../esp-idf/01_factory/README_ZH.md) 单独保留。
+天气和 AIChats 需要能够访问互联网，AIChats 需按屏幕提示完成激活。若提示缺少语音模型，请烧录完整出厂固件或执行完整的 `idf.py flash`，不要只烧录应用；其他问题请参照[使用说明](USER_GUIDE_ZH.md#常见问题)。

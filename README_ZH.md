@@ -9,7 +9,7 @@
   </p>
   <p>
     <a href="https://www.waveshare.net/shop/ESP32-S3-Touch-LCD-3.5B.htm">🌐 产品页</a> &middot;
-    <a href="#quick-start">📦 固件</a> &middot;
+    <a href="firmware/">📦 固件</a> &middot;
     <a href="examples/esp-idf/">🧩 ESP-IDF</a> &middot;
     <a href="examples/arduino/examples/">🔧 Arduino</a> &middot;
     <a href="https://docs.waveshare.net/ESP32-S3-Touch-LCD-3.5B/">📚 文档</a>
@@ -46,11 +46,11 @@
 ## 📦 快速开始
 
 1. 使用 Type-C 数据线将开发板连接至电脑。
-2. 下载[带小智的出厂固件](firmware/ESP32-S3-Touch-LCD-3.5B_FactoryOnly_20261020.bin)，在 Flash Download Tool 中选择 ESP32-S3。
+2. 从[固件目录](firmware/)下载最新出厂固件，在 Flash Download Tool 中选择 ESP32-S3，具体步骤见[烧录说明](firmware/README_ZH.md)。
 3. 将合并固件烧录到 `0x0`。如需手动进入下载模式，按住 BOOT，按一下 RESET，再松开 BOOT。
 4. 复位后进入应用桌面，在设置中配置 Wi-Fi，再打开小智完成服务激活。
 
-出厂固件源码位于 [examples/factory](examples/factory/)，包含应用桌面和小智语音对话；[旧版出厂示例](examples/esp-idf/01_factory/README_ZH.md) 单独保留。可自行编译源码，或从[产品文档](https://docs.waveshare.net/ESP32-S3-Touch-LCD-3.5B/)获取官方固件。
+[出厂源码](examples/factory/README_ZH.md)可用于编译当前固件；[旧版出厂示例源码](examples/esp-idf/01_factory/README_ZH.md)保留供参考。
 
 ## 🧪 示例
 
@@ -84,19 +84,23 @@
 
 Arduino 示例统一使用随附的 LVGL 9.2.2；ESP-IDF 外设示例和旧版出厂工程使用 LVGL 8.4，新版出厂工程使用 LVGL 9.6.0~1。各 ESP-IDF 工程独立管理依赖。
 
+### 出厂演示
+
+[出厂应用套件](examples/factory/README_ZH.md)提供 Settings、AIChats、Touch Test、Photos、Weather、Music、Sensor、2048、Camera、Mic Test 和 Button Test，共 11 个应用。配网步骤、应用操作和 SD 卡目录请参照[使用说明](examples/factory/USER_GUIDE_ZH.md)。
+
+短按一次 PWR 按键开机，长按 5 秒关机。
+
 <a id="development-environment"></a>
 
 ## 🛠️ 开发环境
 
 | 框架 | 版本 | 示例数量 |
 | --- | --- | --- |
-| ESP-IDF | v5.5.4 | 7 个及出厂固件源码 |
+| ESP-IDF | v5.5.4 | 7 个 |
+| ESP-IDF（出厂工程） | v5.5.4 | 1 个 |
 | Arduino-ESP32 | 3.3.10 | 11 个 |
 
 版本及 Arduino 开发板参数统一配置在 [product.json](.github/product.json)。Arduino 选择 **ESP32S3 Dev Module**，Flash 16 MB、PSRAM OPI、Flash QIO、启动时启用 USB CDC，并选择 16 MB Flash 下 3 MB APP / 9 MB FATFS 分区。将随附 Arduino 库及共用的 `lv_conf.h` 复制到草图目录的 `libraries` 文件夹。
-
-
-
 ## 📚 资料
 
 - [不带外壳版本产品页](https://www.waveshare.net/shop/ESP32-S3-Touch-LCD-3.5B.htm)

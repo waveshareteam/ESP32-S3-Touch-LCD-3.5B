@@ -24,7 +24,7 @@
 namespace esp_brookesia::apps {
 
 /**
- * Single-microphone WakeNet front end for the S3 3.5 ES8311.
+ * Single-microphone WakeNet front end for the S3 3.5B ES8311.
  * Input is 16 kHz signed 16-bit mono PCM. No analog playback reference
  * is wired on this board. The callback receives a 60 ms mono frame.
  */
