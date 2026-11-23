@@ -108,6 +108,11 @@ Arduino 示例统一使用随附的 LVGL 9.2.2；ESP-IDF 外设示例和旧版�
 - [中文产品文档](https://docs.waveshare.net/ESP32-S3-Touch-LCD-3.5B/)
 - [V1 原理图](hardware/schematic/ESP32-S3-Touch-LCD-3.5B-V1-Schematic.pdf)
 - [V2 原理图](hardware/schematic/ESP32-S3-Touch-LCD-3.5B-V2-Schematic.pdf)
+- [不带外壳版 2D/3D 资料包（RAR）](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B-2Dand3D.rar)
+- [带外壳版尺寸资料包（RAR）](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B-C-Dimensions.rar)
+- 不带外壳版尺寸图：[PDF](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B.pdf) / [DWG](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B.dwg)
+- 带外壳版尺寸图：[PDF](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B-C.pdf) / [DWG](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B-C.dwg)
+- [不带外壳版 3D 模型（STEP）](hardware/mechanical/ESP32-S3-Touch-LCD-3_5B.stp)
 
 ## 🤝 支持
 
