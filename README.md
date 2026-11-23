@@ -108,6 +108,11 @@ Versions and the Arduino board options are defined in [product.json](.github/pro
 - [Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-3.5B)
 - [V1 schematic](hardware/schematic/ESP32-S3-Touch-LCD-3.5B-V1-Schematic.pdf)
 - [V2 schematic](hardware/schematic/ESP32-S3-Touch-LCD-3.5B-V2-Schematic.pdf)
+- [Bare board 2D/3D archive (RAR)](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B-2Dand3D.rar)
+- [Enclosure dimensions archive (RAR)](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B-C-Dimensions.rar)
+- Dimensions without enclosure: [PDF](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B.pdf) / [DWG](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B.dwg)
+- Dimensions with enclosure: [PDF](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B-C.pdf) / [DWG](hardware/mechanical/ESP32-S3-Touch-LCD-3.5B-C.dwg)
+- [Bare board 3D model (STEP)](hardware/mechanical/ESP32-S3-Touch-LCD-3_5B.stp)
 
 ## 🤝 Support
 

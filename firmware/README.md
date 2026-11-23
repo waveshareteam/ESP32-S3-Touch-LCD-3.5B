@@ -1,12 +1,14 @@
+# Firmware
+
 [English](README.md) | [简体中文](README_ZH.md)
 
-# Firmware
+- **Compatible models:** ESP32-S3-Touch-LCD-3.5B (without enclosure) and ESP32-S3-Touch-LCD-3.5B-C (with enclosure) share this factory firmware.
+- **Camera support:** Supports the **OV5640 camera**. The enclosed model includes the module; the model without an enclosure requires a separately connected camera module for camera functions.
+- **Web flashing:** Select **ESP32-S3-Touch-LCD-3.5B** in the [firmware center](https://hub.waveshare.net/).
 
 | File | Description | Build Environment |
 | --- | --- | --- |
 | [ESP32-S3-Touch-LCD-3.5B_FactoryOnly_20261021.bin](ESP32-S3-Touch-LCD-3.5B_FactoryOnly_20261021.bin) | Factory desktop with 11 applications, including AIChats and Button Test | ESP-IDF v5.5.4 |
-
-This directory contains only the latest factory image. It applies to ESP32-S3-Touch-LCD-3.5B and the enclosed ESP32-S3-Touch-LCD-3.5B-C. Camera functions require a compatible camera; the enclosed version includes an OV5640.
 
 The merged image includes the bootloader, partition table, application and speech model. Flash the complete image at `0x0`.
 
