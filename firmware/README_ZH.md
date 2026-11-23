@@ -1,12 +1,14 @@
+# 固件
+
 [English](README.md) | [简体中文](README_ZH.md)
 
-# 固件
+- **适用型号：** ESP32-S3-Touch-LCD-3.5B（不带外壳版）、ESP32-S3-Touch-LCD-3.5B-C（带外壳版），两款共用本出厂固件。
+- **摄像头支持：** 已适配 **OV5640 摄像头**。带外壳版随附该模组，不带外壳版需另配并连接模组后使用摄像头功能。
+- **网页烧录：** 在[固件中心](https://hub.waveshare.net/)统一选择 **ESP32-S3-Touch-LCD-3.5B**。
 
 | 文件 | 说明 | 编译环境 |
 | --- | --- | --- |
 | [ESP32-S3-Touch-LCD-3.5B_FactoryOnly_20261021.bin](ESP32-S3-Touch-LCD-3.5B_FactoryOnly_20261021.bin) | 提供 11 个应用的出厂桌面，包含 AIChats 和 Button Test | ESP-IDF v5.5.4 |
-
-此目录仅保留最新出厂固件，适用于 ESP32-S3-Touch-LCD-3.5B 和带外壳的 ESP32-S3-Touch-LCD-3.5B-C。摄像头功能需要连接兼容摄像头，带外壳版本含 OV5640 摄像头。
 
 合并镜像包含引导程序、分区表、应用和语音模型，完整镜像烧录地址为 `0x0`。
 
